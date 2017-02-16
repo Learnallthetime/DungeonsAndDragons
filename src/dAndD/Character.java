@@ -1,3 +1,5 @@
+package dAndD;
+
 // The information that this class will hold will be...
 // 1. Attributes, Method of damage,
 public class Character {
@@ -8,11 +10,13 @@ public class Character {
 	public int strength;
 	public int health;
 	
+	public boolean isEnemy;
+	
 	public Character(String name)
 	{
 		ID = ++lastID;
 		health = 10;
-		strength = 3
+		strength = 3;
 		this.name = name;
 	}
 	
@@ -31,6 +35,9 @@ public class Character {
 		enemy.recieveDamage(strength);
 	}
 	
-	System.out.println(health)
+	public void act(Battlefield field)
+	{
+		
+	}
 
 }
