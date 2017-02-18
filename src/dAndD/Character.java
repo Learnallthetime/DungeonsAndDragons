@@ -1,5 +1,7 @@
 package dAndD;
 
+import java.util.ArrayList;
+
 // The information that this class will hold will be...
 // 1. Attributes, Method of damage,
 public class Character {
@@ -37,7 +39,17 @@ public class Character {
 	
 	public void act(Battlefield field)
 	{
-		
+		ArrayList<Character> characters = field.getCombatans();
+		Character result = null;
+		for (Character c : characters)
+		{
+			if (c.isEnemy == this.isEnemy)
+				continue;
+			
+			if (result == null || c.health < result.health)
+				result = c;
+		}
+		if (result != null)
+			hit(result);
 	}
-
 }
