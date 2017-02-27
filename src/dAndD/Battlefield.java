@@ -24,8 +24,13 @@ public class Battlefield {
 		{
 			for (Character c : combatants) {
 				c.act(this);
-			}	
+			}
+			
+			UI.printTeam(combatants, false);
+			UI.printTeam(combatants, true);
 
+			enemyLeft = false; 
+			friendsLeft = false;
 			for (Character c : combatants) {
 				if (c.isEnemy && c.health > 0)
 					enemyLeft = true; 
