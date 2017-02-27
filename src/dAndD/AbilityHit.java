@@ -10,15 +10,10 @@ public class AbilityHit extends Ability
 	}
 
 	public void run(Character c, Battlefield b) {
-		enemy.recieveDamage(c.strength);
-		UI.print(name + " hits " + enemy.name + " with " + c.strength + " damage.");
+		enemy.recieveDamage(c.attributes.strength);
+		UI.print(name + " hits " + enemy.name + " with " + c.attributes.strength + " damage.");
 	}
 
-	public void magic(Character c, Battlefield b){
-		enemy.recieveDamage(c.intelligence);
-	UI.print(name + " hits " + enemy.name + " with " + c.intelligence + " magic damage.");
-	}
-	
 	public boolean check(Character c, Battlefield b) {
 		return enemy != null;
 	}

@@ -18,13 +18,13 @@ public class Main {
 		//System.out.println("Choose your character build");
 		
 		ArrayList<Character> characters = new ArrayList<Character>();
-		characters.add(new Character("Ivan", 100, 8, 20, false));
-		characters.add(new Character("Phil", 100, 8, 50, false));
-		characters.add(new Character("Goblin 1", 5, 1, 0, true));
-		characters.add(new Character("Goblin 2", 5, 1, 0, true));
-		characters.add(new Character("Goblin 3", 5, 1, 0, true));
-		characters.add(new Character("Goblin 4", 5, 1, 0, true));
-		characters.add(new Character("Imperial Dragon Zombie", 150, 10, 70, true));
+		characters.add(new Character("Ivan", Attributes.Goblin(), false));
+		characters.add(new Character("Phil", Attributes.Goblin(), false));
+		characters.add(new Character("Goblin 1", Attributes.Goblin(), true));
+		characters.add(new Character("Goblin 2", Attributes.Goblin(), true));
+		characters.add(new Character("Goblin 3", Attributes.Goblin(), true));
+		characters.add(new Character("Goblin 4", Attributes.Goblin(), true));
+		characters.add(new Character("Imperial Dragon Zombie", Attributes.Goblin(), true));
 		Battlefield field = new Battlefield(characters);
 		field.fight();
 	}

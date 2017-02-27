@@ -40,7 +40,7 @@ public class UI {
 			if (c.isEnemy != isEnemy)
 				continue; 
 
-			System.out.println(c.name + " HP: " + c.health + " Str: " + c.strength + " Magic: " + c.intelligence);
+			System.out.println(c.name + " HP: " + c.attributes.health + " Str: " + c.attributes.strength + " Magic: " + c.attributes.intelligence);
 		}
 	}
 	

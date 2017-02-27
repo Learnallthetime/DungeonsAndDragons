@@ -32,10 +32,10 @@ public class Battlefield {
 			enemyLeft = false; 
 			friendsLeft = false;
 			for (Character c : combatants) {
-				if (c.isEnemy && c.health > 0)
+				if (c.isEnemy && c.attributes.health > 0)
 					enemyLeft = true; 
 
-				if (!c.isEnemy && c.health > 0)
+				if (!c.isEnemy && c.attributes.health > 0)
 					friendsLeft = true;
 			}
 
